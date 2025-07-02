@@ -1,0 +1,47 @@
+*{
+    --white:white;
+    --bg-purple:#A259FF;
+
+}
+section{
+    margin-top: 8rem;
+}
+.albums-trend-coll-content {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.items-trend-coll-header h1 {
+ color: white;
+}
+.items-trend-coll-header p{
+    color: rgb(170, 170, 165);
+        margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 15px;
+    padding-top: 0.3rem;
+}
+.items-trend-coll-header{
+    padding-left: 1rem;
+}
+.bottom-images-minimal h3 {
+        background: var(--bg-purple);
+    padding: 2.5rem 2rem;
+    border-radius: 1.5rem;
+    color: white;
+    /* margin-top: 0.8rem; */
+}
+.bottom-images-minimal {
+    display: flex; 
+    align-items:center ;
+    column-gap: 1.8rem;
+}
+.infoes-artist-album h3{
+  color: white;
+  padding: 0.2rem 0;
+}
+.infoes-artist-album .artis-info-album{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    margin-bottom: 0;
+}

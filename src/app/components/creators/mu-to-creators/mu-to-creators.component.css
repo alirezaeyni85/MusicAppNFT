@@ -1,0 +1,63 @@
+*{
+    --white-color:white;
+    --purple:#A259FF;
+    --bg-black-number:#2B2B2B;
+}
+section{
+    color: var(--white-color);
+    margin-top: 6rem;
+    margin-bottom:3rem;
+}
+section .header-creators-page{
+    display: flex;
+    justify-content: space-between;
+} 
+.header-creators-right .btn-view-rank-creators {
+    border: var(--purple) 1.4px solid;
+    padding:1rem 3rem;
+    border-radius: 1rem;
+}
+.header-creators-page .btn-view-rank-creators button{
+    border: none;
+    color: var(--white-color);
+    font-size: 1.1rem;
+}
+.header-creators-left h1{
+    font-size: 2rem;
+}
+.header-creators-left p{
+        font-size: 1.5rem;
+    padding: 0.5rem 0;
+}
+/* card */
+
+
+.main-card-creators-page {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+
+}
+
+.card-creator{
+    background: #3B3B3B;
+    padding: 1.4rem 1rem;
+    text-align: center;
+    border-radius: 10%;
+}
+.card-creator * {
+    background: #3B3B3B;
+
+}
+.card-creator .img-creator{
+    display: flex;
+    align-items: start;
+    column-gap: 3.2rem;
+    margin-bottom: 1rem;
+}
+.card-creator .img-creator h3{
+    padding: 0.4rem 0.8rem;
+    border-radius:50%;
+    background:var(--bg-black-number);
+}

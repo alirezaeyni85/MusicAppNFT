@@ -1,0 +1,32 @@
+<section>
+    <div class="container">
+        <header class="header-creators-page">
+            <div class="header-creators-left">
+                    <h1>Top creators</h1>
+                    <p>Checkout Top Rated Creators on the NFT Marketplace</p>
+            </div>
+            <div class="header-creators-right">
+                <div class="btn-view-rank-creators">
+                    <button>View Rankings</button>
+                </div>
+            </div>
+        </header>
+        <main class="main-card-creators-page">
+          @for (card of getCreators.infoCreators; track $index ; let index = $index)  {
+ <div class="card-creator"  >
+                <div class="img-creator">
+                    <h3>{{index +1}}</h3>
+                    <img [src]="[card.img]" alt="">
+                </div>
+                <div>
+                      <h2>{{card.name}}</h2>
+                      <p>Total Sales: <span>{{card.totalSale}}</span></p>
+                </div>
+                     
+            </div>
+          } 
+
+        </main>
+         
+    </div>
+</section>

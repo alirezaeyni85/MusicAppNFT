@@ -1,0 +1,37 @@
+<section>
+    <div class="container-trend-coll">
+        <div class="items-trend-coll-header">
+            <h1>Trending Collection</h1>
+            <p>Checkout Our Weekly Updated Trending Collection.</p>
+        </div>
+         
+        <div class="albums-trend-coll-content">
+
+          @for (image of getImages.imagesTrendCollection; track $index) {
+            
+             <div class="album-trend-coll-img" >
+        
+                <img [src]="[image.mainImg]" alt="" width="400px">
+                <div class="bottom-images-minimal">
+                  <div class="minimal-images-album" *ngFor="let imageMinimal of image.minimalImages">
+                    <img [src]="[imageMinimal]" alt="" width="112px">
+                </div>
+                    <h3>1025+</h3>
+                </div>
+                
+                <div class="infoes-artist-album">
+                    <h3>{{image.albumName}}</h3>
+                    <div class="artis-info-album">
+                         <img [src]="[image.imgAvat]" alt="">
+                         <p style="color: white;">{{image.artistName}}</p>
+                    </div>
+                </div>
+
+            </div> 
+          
+          }
+            
+        </div>
+
+    </div>
+</section>
