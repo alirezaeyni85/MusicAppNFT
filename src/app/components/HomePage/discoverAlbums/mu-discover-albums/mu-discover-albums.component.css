@@ -1,0 +1,59 @@
+*{
+    --text-color: white;
+    --purple-color:#A259FF;
+}
+section{
+    margin-bottom: 45rem;
+    margin-top: 3rem;
+}
+.content-header-discover-page{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+.discover-album-header-left-side h1{
+    font-size: 2rem;
+}
+.container-images-discover-page{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+}
+.discover-album-header-left-side p{
+    padding-top: 0.5rem;
+    font-size: 1.2rem;
+}
+.discover-album-header-right-side {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--purple-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.7rem;
+    column-gap: 0.5rem;
+}
+.discover-album-header-right-side button{
+    color: var(--text-color);
+    border: none;
+}
+.prof-artist-discover-page {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    column-gap: 1rem;
+    margin:0 0 1.5rem 0;
+
+}
+.content-details-post-artist{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.infoes-bottom{
+    padding: 0 1.3rem;
+}
+.infoes-bottom h1{
+    padding: 1rem 0;}
+

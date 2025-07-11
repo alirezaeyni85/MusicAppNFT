@@ -1,0 +1,11 @@
+.container-top-creators {
+    color: white;
+}
+.container-top-creators h1{
+    padding: 6rem 0 1rem 0rem;
+    font-weight:900; 
+    font-size: 2.1rem;
+}
+.container-top-creators p {
+   font-weight: 800;
+}

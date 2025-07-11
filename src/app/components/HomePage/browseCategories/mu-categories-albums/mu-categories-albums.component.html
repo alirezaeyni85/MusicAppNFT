@@ -1,0 +1,18 @@
+<section>
+    <header class="header-categories-ablums">
+       <h1>Browse Categories</h1>
+    </header>
+    <main>
+        @for (item of imgsCategories.imagesCategoriesAlbums; track $index) {
+ <div class="category-item">
+            <div>
+            <img class="img-category" [src]="[item.img]" alt="">
+
+            </div>
+            <h4>{{item.name}}</h4>
+        </div> 
+        }
+    
+
+    </main>
+</section>

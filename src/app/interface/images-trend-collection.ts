@@ -5,4 +5,5 @@ export interface ImagesTrendCollection {
     imgAvat:string,
     albumName:string,
     artistName:string,
+    qauntityLike:number,
 }

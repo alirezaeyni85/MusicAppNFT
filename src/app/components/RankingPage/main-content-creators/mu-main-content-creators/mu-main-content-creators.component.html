@@ -1,0 +1,44 @@
+<section>
+    <header class="header-main-content-creators">
+        <ul>
+            <li> <a >Today</a> </li>
+            <li><a>This Week</a></li>
+            <li><a>This Month</a></li>
+            <li><a>All Time</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="contianer-main-content-creators">
+  <div class="top-item-creators-page">
+            <ul class="layut-items-creators">
+                <li>#</li>
+                <li>Artist</li>
+                <li>Change</li>
+                <li>NFTs Sold</li>
+                <li>Volume</li>
+            </ul>
+     
+        </div>
+        <div class="items-creators-main">
+@for (item of [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; track $index; let index =$index) {
+      <div class="layut-items-creators more-edit-creators">
+               <p class="first-child-text">{{index +1}}</p>
+               <div class="crators-img">
+                <img src="./CreatorsImage/small-images-creators/Artist Avatar.png" alt="">
+                <h3>Jaydon Ekstrom Bothman</h3>
+               </div>
+               <p style="color: green;">+1.41%</p>
+               <h4>602</h4>
+               <h5>12.4 ETH</h5>
+            </div>
+}
+      
+
+
+        </div>
+
+        </div>
+      
+    </main>
+</section>

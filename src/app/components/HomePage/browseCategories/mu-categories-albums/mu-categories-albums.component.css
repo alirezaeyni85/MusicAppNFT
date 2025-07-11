@@ -1,0 +1,25 @@
+section{
+    color: white;
+}
+section main{
+    display: grid;
+    grid-template-columns: repeat(4,27.1%);
+    row-gap: 2rem;
+}
+.header-categories-ablums {
+    padding: 0 0 2rem 0rem;
+}
+.category-item {
+    background: #3B3B3B;
+    padding-bottom: 1rem;
+    width: max-content;
+    border-radius: 0 1rem 1rem 1rem;
+}
+.category-item *:not(.img-category){
+    background: #3B3B3B;
+
+}
+.category-item h4{
+    margin-top: 0.8rem;
+    margin-left: 1rem;
+}

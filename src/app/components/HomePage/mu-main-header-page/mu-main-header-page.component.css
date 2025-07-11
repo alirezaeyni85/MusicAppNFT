@@ -20,6 +20,7 @@
     font-size: 2rem;
 }
 .main-header-left-page .btn-get-start{
+    margin-top: 2rem;
     padding: 1rem 3rem;
     color: var(--color-white);
     border-radius: 1.2rem;
@@ -33,7 +34,7 @@
     border-radius: 0rem 0rem 1rem 1rem ;
 
 }
-.header-right-picture-page *{
+.header-right-picture-page *:not(img){
     background: var(--light-dark);
 }
 .prof-user-header-page-right {
