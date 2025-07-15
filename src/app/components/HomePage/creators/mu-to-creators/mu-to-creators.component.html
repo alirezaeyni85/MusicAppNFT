@@ -12,7 +12,7 @@
             </div>
         </header>
         <main class="main-card-creators-page">
-          @for (card of getCreators.infoCreators; track $index ; let index = $index)  {
+          @for (card of getCreators; track $index ; let index = $index)  {
  <div class="card-creator"  >
                 <div class="img-creator">
                     <h3>{{index +1}}</h3>
@@ -20,7 +20,7 @@
                 </div>
                 <div>
                       <h2>{{card.name}}</h2>
-                      <p>Total Sales: <span>{{card.totalSale}}</span></p>
+                      <p>Total Sales: <span>{{card.soldMusic}} ETH</span></p>
                 </div>
                      
             </div>

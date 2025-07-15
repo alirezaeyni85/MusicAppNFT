@@ -9,11 +9,7 @@ export class MuImagesService {
   constructor() { }
 
   public imagesTrendCollection:ImagesTrendCollection[] =[
-    {id:1, qauntityLike:8, albumName:'DSGN Animals',artistName:'MrFox',mainImg:'./images-trend-collection/dog.png',minimalImages:['./minimal-Images/rabbit.png','./minimal-Images/beard.png'], imgAvat:'./avators/fox.png'},
-    {id:2, qauntityLike:30, albumName:'Magic Mushrooms',artistName:'Shroomie', mainImg:'./images-trend-collection/mashroom.png', minimalImages:['./minimal-Images/mashroomMini.png','./minimal-Images/mashroomMini.png'], imgAvat:'./avators/humon.png'},
-    {id:3, qauntityLike:192, albumName:'Disco Machines',artistName:'BeKind2Robots' ,mainImg:'./images-trend-collection/ironMan.png',minimalImages:['./minimal-Images/ironManMini.png','./minimal-Images/ironManMini.png'],imgAvat:'./avators/ironAvator.png'},
-    {id:4, qauntityLike:20, albumName:'DSGN Animals',artistName:'MrFox',mainImg:'./images-trend-collection/dog.png',minimalImages:['./minimal-Images/rabbit.png','./minimal-Images/beard.png'], imgAvat:'./avators/fox.png'},
-
+  
   ]
 
   public imagesCategoriesAlbums:any[] = [

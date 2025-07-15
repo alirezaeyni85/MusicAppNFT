@@ -1,15 +1,15 @@
 <section>
     <header class="header-main-content-creators">
         <ul>
-            <li> <a >Today</a> </li>
-            <li><a>This Week</a></li>
-            <li><a>This Month</a></li>
-            <li><a>All Time</a></li>
+            <li> <a #btnHistory>Today</a> </li>
+            <li><a  #btnHistory>This Week</a></li>
+            <li><a #btnHistory >This Month</a></li>
+            <li><a #btnHistory >All Time</a></li>
         </ul>
     </header>
 
     <main>
-        <div class="contianer-main-content-creators">
+        <div btn class="contianer-main-content-creators">
   <div class="top-item-creators-page">
             <ul class="layut-items-creators">
                 <li>#</li>
@@ -21,24 +21,24 @@
      
         </div>
         <div class="items-creators-main">
-@for (item of [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; track $index; let index =$index) {
+@for (item of artistsCreators() ; track $index; let index =$index) {
       <div class="layut-items-creators more-edit-creators">
                <p class="first-child-text">{{index +1}}</p>
                <div class="crators-img">
-                <img src="./CreatorsImage/small-images-creators/Artist Avatar.png" alt="">
-                <h3>Jaydon Ekstrom Bothman</h3>
+                <img [src]="[item.img]" width="60px" height="60x" style="object-fit: contain;" alt="">
+                <h3>{{item.name}}</h3>
                </div>
-               <p style="color: green;">+1.41%</p>
-               <h4>602</h4>
-               <h5>12.4 ETH</h5>
+               <p style="color: green;">+{{item.update}}%</p>
+               <h4>{{item.soldMusic}}</h4>
+               <h5> {{item.volume}}ETH</h5>
             </div>
 }
-      
 
 
         </div>
 
         </div>
-      
+    
     </main>
 </section>
+

@@ -14,17 +14,17 @@
     </header>
 <main class="container-images-discover-page">
 
-    @for (item of getInfoArtist.infoesImagesDiscover; track $index) {
- <div class="category-item">
+    @for (item of getInfoArtist; track $index) {
+ <div class="category-item" (click)="onNavigate(item.id ,item.albumName)" >
             <div>
-            <img class="img-category" [src]="[item.img]" alt="">
+            <img class="img-category" [src]="[item.mainImg]" alt="">
 
             </div>
          <div class="infoes-bottom">
-            <h1>{{item.title}}</h1>
+            <h1>{{item.albumName}}</h1>
             <div class="prof-artist-discover-page">
                 <img [src]="[item.imgProf]" alt="">
-                <p>{{item.textProf}}</p>
+                <p>{{item.artistName}}</p>
             </div>
             <div class="content-details-post-artist">
                 <div class="price-post-artist">

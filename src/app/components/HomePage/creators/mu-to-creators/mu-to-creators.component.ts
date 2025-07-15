@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { MuInfoCreatorsService } from '../../../../service/infoes-creators/mu-info-creators.service';
+import { MuInfoCreatorsService } from '../../../../service/artists/mu-info-creators.service';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,5 +9,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './mu-to-creators.component.css'
 })
 export class MuToCreatorsComponent {
-public getCreators = inject(MuInfoCreatorsService);
+public getCreators = inject(MuInfoCreatorsService).infoCreators.slice(0,12);
 }

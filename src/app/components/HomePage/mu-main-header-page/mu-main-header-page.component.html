@@ -5,28 +5,18 @@
          <p>NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.</p>
          <button class="btn-get-start">Get Started</button>
          <div class="info-product">
-                <!-- <table>
-                <thead>
-                     <th>240k+ </th>
-                    <th class="p-y-table">100k+</th>
-                    <th>240k+</th> 
-                 </thead>
-                 <tbody>
-                    <td>Total Sale</td>
-                    <td class="p-y-table">Auctions</td>
-                    <td>Artists</td>
-                 </tbody>
-                </table> -->
+            @for (item of astisticsArtists.Change; track $index) {
+            <div class="list-of-changes">
+                    <h3>{{item.key}}</h3>
+                    <h3>{{item.value}}k+</h3>
+            </div>
+            }
             </div>
         </div>
-        
         <div class="main-header-right-page">
            <div class="content-main-header-right-page">
             <div  class="header-right-picture-page"  >
-             
                <img   src="./picture-header/Image Placeholder.png" alt="">
-
-
                 <div style="margin-left: 2rem;">
                   <h2>Space Walking</h2>
                 <div class="prof-user-header-page-right">
@@ -34,21 +24,8 @@
                     <span>Animakid</span>
                 </div>
                 </div>
-
-              
-                
             </div>
-            
            </div>
         </div>
-
-
-
     </div>
-
-
-
-
-
-
 </section>

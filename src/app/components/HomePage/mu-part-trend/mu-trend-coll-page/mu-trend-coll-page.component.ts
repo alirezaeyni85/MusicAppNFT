@@ -3,6 +3,7 @@ import { MuImagesService } from '../../../../service/images/mu-images.service';
 import { NgFor } from '@angular/common';
 import { MuToCreatorsComponent } from "../../creators/mu-to-creators/mu-to-creators.component";
 import { ImagesTrendCollection } from '../../../../interface/images-trend-collection';
+import { MuAlbumsMusic } from '../../../../service/albums/mu-albums-music.service';
 
 @Component({
   selector: 'app-mu-trend-coll-page',
@@ -11,7 +12,7 @@ import { ImagesTrendCollection } from '../../../../interface/images-trend-collec
   styleUrl: './mu-trend-coll-page.component.css'
 })
 export class MuTrendCollPageComponent implements OnInit{
-  public getImages:ImagesTrendCollection[]= inject(MuImagesService).imagesTrendCollection;
+  public getImages:ImagesTrendCollection[]= inject(MuAlbumsMusic).infoesAlbums;
   public filterdTrendCollection =signal(this.getImages);
 constructor(){}
 

@@ -44,10 +44,8 @@
     
 }
 .info-product{
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
+    display: flex;
+    column-gap: 5rem;
     font-size: 1.5rem;
-}
-.p-y-table{
-  padding: 0 6rem;
-
 }
