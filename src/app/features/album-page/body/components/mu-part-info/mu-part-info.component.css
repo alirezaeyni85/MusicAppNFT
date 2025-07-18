@@ -1,0 +1,115 @@
+*{
+    --text-color: white;
+    --purple-color:#A259FF;
+}
+section{
+    padding: 2rem 6rem;
+}
+.contianer-part-information{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    color: white;
+
+}
+
+.big-image img{
+width: 100%;
+}
+.linkOfAlbum{
+    display: flex;
+    align-items: center;
+    column-gap: 0.3rem;
+}
+.part-created-by .artist-img {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    margin-top: 0.7rem;
+}
+.part-created-by h5{
+    margin-top: 2rem;
+}
+.text-details {
+    margin: 1rem 0 0.2rem 0;
+}
+
+.container-part-of-tags p{
+    margin: 1.5rem 0 0.7rem 0 ; 
+}
+.list-of-tags{
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+.list-of-tags li{
+    background: #3B3B3B;
+    list-style: none;
+    padding:0.5rem 1rem;
+    border-radius: 2rem;
+    font-weight: 900;
+}
+.list-of-tags li a {
+    background: transparent;
+}
+
+
+
+
+
+/*  */
+
+.container-images-discover-page{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+    margin-top: 3rem;
+}
+.discover-album-header-left-side p{
+    padding-top: 0.5rem;
+    font-size: 1.2rem;
+}
+.discover-album-header-right-side {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--purple-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.7rem;
+    column-gap: 0.5rem;
+}
+.discover-album-header-right-side button{
+    color: var(--text-color);
+    border: none;
+}
+.prof-artist-discover-page {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    column-gap: 1rem;
+    margin:0 0 1.5rem 0;
+
+}
+.content-details-post-artist{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-color);
+}
+.creator-img {
+ 
+}
+.infoes-bottom{
+    padding: 0 1.3rem;
+}
+.infoes-bottom h1{
+    padding: 1rem 0;}
+
+.category-item {
+      background: #3B3B3B;
+    border-radius: 2rem;
+    padding-bottom:1.3rem;
+
+}
+.category-item *:not(.img-category){
+    background: transparent;
+
+}
