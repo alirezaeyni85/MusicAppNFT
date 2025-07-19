@@ -20,15 +20,18 @@ export class MuPartInfoComponent implements OnInit {
   public routerActive:ActivatedRoute =inject(ActivatedRoute);
   public albums:any = inject(MuAlbumsMusic)
   public listOfSongs:any = signal({})
+  public isValid:any =false;
+
+ngOnInit(): void {  
+        //assign album in selectAlbum signal
+       this.routerActive.data.subscribe(albumData=>{
+      this.selectAlbum.set([albumData['albumData'].album])
+      })
 
 
-ngOnInit(): void {
-      const getIdFromActivePage =this.routerActive.snapshot.params['id'];
-      console.log(getIdFromActivePage)
-      const getAlbums =this.albums.getDatas(getIdFromActivePage,{includeAlbum:true,includeSongs:false}).album
-      this.selectAlbum.set([getAlbums])
+        //assign album in songs signal
       this.listOfSongs.set(...this.selectAlbum().map((item:any)=>item.songs))
-      console.log("songsArray",this.listOfSongs())
+      console.log('selectedAlbum',this.selectAlbum())
   }
   
 

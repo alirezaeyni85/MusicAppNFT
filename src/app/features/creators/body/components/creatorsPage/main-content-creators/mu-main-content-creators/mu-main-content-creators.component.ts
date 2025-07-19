@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, inject, OnInit, QueryList, signal, ViewChildren } from '@angular/core';
 import { MuInfoCreatorsService } from '../../../../../../../core/service/artists/mu-info-creators.service';
-import { debounceTime, fromEvent, map, tap } from 'rxjs'
+import { debounceTime, fromEvent, map } from 'rxjs'
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-mu-main-content-creators',
@@ -10,8 +11,9 @@ import { debounceTime, fromEvent, map, tap } from 'rxjs'
 })
 export class MuMainContentCreatorsComponent implements OnInit ,AfterViewInit{
   // *Get Creators From Service*
-  public artistsCreators = signal( inject(MuInfoCreatorsService).infoCreators);
-  public copyOfCreators = inject(MuInfoCreatorsService).infoCreators
+  public artistsCreators:any = signal([]);
+  public copyOfCreators = inject(MuInfoCreatorsService).infoCreators;
+  public router = inject(ActivatedRoute)
   // *ViewChildren For Btns* 
   @ViewChildren('btnHistory') btns!:QueryList<ElementRef>;
   // *Array Of Change MusicSold* 
@@ -19,8 +21,15 @@ export class MuMainContentCreatorsComponent implements OnInit ,AfterViewInit{
   
 ngOnInit(): void {
 
+         // assign creators in varubles and 
+          this.router.data.subscribe((creator:any)=>{
+            console.log('creatorArray', creator['cretors'])
+            this.artistsCreators.set(creator['cretors'])
+            this.copyOfCreators = creator['cretors']
+          })
+
   // *Sorting Creators*
-this.artistsCreators.set(this.artistsCreators().sort((firstItem,secondItem)=>{
+this.artistsCreators.set(this.artistsCreators().sort((firstItem:any,secondItem:any)=>{
   return Number(firstItem.soldMusic) - Number(secondItem.soldMusic)
 }).reverse())
 
@@ -68,7 +77,7 @@ public getHistoryOfChange(history:string){
 // *Calculate MusicSold Function*
 calculateSoldMusic(day:number){
 
-const calculatedChange = this.artistsCreators().map((artist)=>{
+const calculatedChange = this.artistsCreators().map((artist:any)=>{
       const calculated = this.arrayOfSoldMusic[0].find((item: any)=> item.id == artist.id)
       artist.soldMusic = Number((calculated.soldMusic *day).toFixed(2))
       artist.update = Number((calculated.change *day).toFixed(2))
