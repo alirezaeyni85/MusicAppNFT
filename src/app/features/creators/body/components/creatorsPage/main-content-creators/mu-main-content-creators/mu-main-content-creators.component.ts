@@ -21,9 +21,8 @@ export class MuMainContentCreatorsComponent implements OnInit ,AfterViewInit{
   
 ngOnInit(): void {
 
-         // assign creators in varubles and 
+         // assign creators from resolveData
           this.router.data.subscribe((creator:any)=>{
-            console.log('creatorArray', creator['cretors'])
             this.artistsCreators.set(creator['cretors'])
             this.copyOfCreators = creator['cretors']
           })

@@ -1,0 +1,37 @@
+<main class="main-login-form-body">
+    <section>
+         <div class="login-page-img">
+            <img style="border-radius:0rem 3rem 3rem 0rem;" src="./login-image/Image Placeholder.png" alt="">
+         </div>
+    </section>
+    <section>
+        <article class="form-login">
+           <div class="header-login-form">
+              <h1>Create account</h1>
+              <p>Welcome! enter your details and start creating, collecting and selling NFTs.</p>
+           </div>
+           <form class="body-login-form-inputs" [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()" >
+               <div class="input-login-body">
+                 <i class="bi bi-person"></i>
+                 <input type="text" placeholder="Username" formControlName="firstName" >
+               </div>
+               <div class="input-login-body">
+                 <i class="bi bi-envelope"></i>
+                 <input type="email" placeholder="Email Address" formControlName="email">
+               </div>
+               <div class="input-login-body">
+                 <i class="bi bi-lock"></i>
+                 <input type="password" placeholder="Password" formControlName="password">
+               </div>
+               <div class="input-login-body">
+                 <i class="bi bi-lock"></i>
+                 <input type="password" placeholder="Confirm Password" formControlName="confirmPasswrod">
+               </div>
+               <div class="btn-login-body">
+                <button>Create account</button>
+               </div>
+               
+              </form>
+        </article>
+    </section>
+</main>

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -6,5 +6,12 @@ import { Injectable } from '@angular/core';
 export class MuMethodsServiceService {
 
   constructor() { }
-
+  public  isLogin = signal(false);
+  
+  public setIsLogin():void{
+     this.isLogin.set(true);
+  }
+  public getIsLogin():boolean{
+    return this.isLogin();
+  }
 }

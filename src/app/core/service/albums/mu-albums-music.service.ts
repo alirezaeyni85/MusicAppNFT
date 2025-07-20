@@ -1,14 +1,15 @@
 import { Injectable } from "@angular/core";
 import { InformationArtist } from "./descriptionArtist/mu-information-artist.service";
+import { MuAlbumsModel, MuArtistModel, MuInfoesOfArtists, MuMethod, MuSongsModel } from "../../interface/mu-albums-model";
 
 @Injectable({providedIn:'root'})
-export class MuAlbumsMusic {
+export class MuAlbumsMusic  implements MuMethod{
     constructor(){}
 
 
     
 
-   public artist =[  
+   public artist:MuArtistModel[] =[  
     {id:1, artistName:'Keepitreal',imgArtist:'./ImagesDiscover/ProfileArtist-Discover/Asset 12 2.png',},
     {id:2, artistName:'Keepitreal',imgArtist:'./ImagesDiscover/ProfileArtist-Discover/Asset 12 2.png',},
     {id:3, artistName:'Keepitreal',imgArtist:'./ImagesDiscover/ProfileArtist-Discover/Asset 12 2.png',},
@@ -33,7 +34,7 @@ export class MuAlbumsMusic {
 
 
 
- public songs:any[] =[
+ public songs:MuSongsModel[] =[
            { 
             id:1,
             albumView:10 ,
@@ -49,7 +50,7 @@ export class MuAlbumsMusic {
             albumView:3,
             artist:[this.artist[1]],
             qauntityLike:20,
-            imgArtist:'./ImagesDiscover/ProfileArtist-Discover/Avatar Placeholder.png',
+            imgAvat:'./avators/fox.png',
             mainImg:'./ImagesDiscover/discover-images-2.png',
             highesBid:'0.33 wETH',
             minimalImages:['./minimal-Images/rabbit.png','./minimal-Images/beard.png'], 
@@ -61,7 +62,6 @@ export class MuAlbumsMusic {
             albumView:6,
             qauntityLike:80,
             artist:[this.artist[2]],
-            imgArtist:'./ImagesDiscover/ProfileArtist-Discover/Avatar.png',
             mainImg:'./ImagesDiscover/discover-images-3.png',
             highesBid:'0.33 wETH',
             minimalImages:['./minimal-Images/rabbit.png','./minimal-Images/beard.png'],
@@ -149,7 +149,7 @@ export class MuAlbumsMusic {
     ]
 
 
- public infoesOfArtist = [
+ public infoesOfArtist:MuInfoesOfArtists[] = [
         {   id:1, 
             firstParagraph:'The Orbitians is a collection of 10,000 unique NFTs on the Ethereum blockchain', 
             secondParagraph:'There are all sorts of beings in the NFT Universe. The most advanced and friendly of the bunch are Orbitians.', 
@@ -251,7 +251,7 @@ export class MuAlbumsMusic {
     ]
 
 
-    public album = [
+    public album:MuAlbumsModel[] = [
         {
             id:1,
             albumName:'Distant Galaxy',
@@ -273,31 +273,31 @@ export class MuAlbumsMusic {
         },{
             id:4, 
             albumName:'Juanie',
-            artist:this.artist[3],
+            artist:[this.artist[3]],
             songs:[this.songs[6], this.songs[7]],
             information:[this.infoesOfArtist[3]]
      },{
             id:5, 
             albumName:'BlueWhale',
-            artist:this.artist[4],
+            artist:[this.artist[4]],
             songs:[this.songs[8], this.songs[9]],
             information:[this.infoesOfArtist[4]]        },
             {
             id:6, 
             albumName:'Mr fox',
-            artist:this.artist[5],
+            artist:[this.artist[5]],
             songs:[this.songs[10], this.songs[11]],
             information:[this.infoesOfArtist[5]]
         },{
             id:7, 
             albumName:'Shroomie',
-            artist:this.artist[6],
+            artist:[this.artist[6]],
             songs:[this.songs[12], this.songs[13]],
             information:[this.infoesOfArtist[6]]
         },{
             id:8, 
             albumName:'robotica',
-            artist:this.artist[7],
+            artist:[this.artist[7]],
             songs:[this.songs[14], ],
             information:[this.infoesOfArtist[7]]
 
@@ -305,60 +305,60 @@ export class MuAlbumsMusic {
             id:9, 
             information:[this.infoesOfArtist[8]],       
             albumName:'RustyRobot',
-            artist:this.artist[8],
+            artist:[this.artist[8]],
             songs:[this.songs[15],]
         },{
             id:10,      
             albumName:'animakid',
-            artist:this.artist[9],
+            artist:[this.artist[9]],
             songs:[this.songs[16], this.songs[1]],
             information:[this.infoesOfArtist[9]]
         },{
             id:11, 
             albumName:'Dotgu',
-            artist:this.artist[10],
+            artist:[this.artist[10]],
             songs:[this.songs[17], this.songs[1]]
             ,information:[this.infoesOfArtist[10]]
         },{
             id:12, 
             albumName:'Ghiblier',
-            artist:this.artist[11],
+            artist:[this.artist[11]],
             songs:[this.songs[0], this.songs[1]],     
             information:[this.infoesOfArtist[11]]   
           },{
             id:13, 
             albumName:'animakid',
-            artist:this.artist[12],
+            artist:[this.artist[12]],
             songs:[this.songs[6], this.songs[1]],
             information:[this.infoesOfArtist[12]] 
     },{
             id:15, 
             albumName:'Catch 22',
-            artist:this.artist[14],
+            artist:[this.artist[14]],
             songs:[this.songs[8], this.songs[1]],
             information:[this.infoesOfArtist[13]]        },{
             id:16, 
             albumName:'Ice Ape Club',
-            artist:this.artist[15],
+            artist:[this.artist[15]],
             songs:[this.songs[9], this.songs[1]],
             information:[this.infoesOfArtist[14]]
        },{
             id:17, 
             albumName:'PuppyPower',
-            artist:this.artist[16],
+            artist:[this.artist[16]],
             songs:[this.songs[17], this.songs[1]]
             ,information:[this.infoesOfArtist[15]]
         },{
             id:18, 
             albumName:'NebulaKid',
-            artist:this.artist[17],
+            artist:[this.artist[17]],
             songs:[this.songs[18], this.songs[1]]
             ,information:[this.infoesOfArtist[16]]
 
         },{
             id:19, 
             albumName:'MoonDancer',
-            artist:this.artist[18],
+            artist:[this.artist[18]],
             songs:[this.songs[10], this.songs[1]] ,
             information:[this.infoesOfArtist[17]]
         }

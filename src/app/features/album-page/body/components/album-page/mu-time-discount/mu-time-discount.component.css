@@ -16,8 +16,7 @@
       font-size:var(--font-size);
     font-weight: var(--font-weight);
     border-radius: 1rem;
-    row-gap: 1rem;
-}
+    row-gap: 1rem;}
 .timer-items *{
     background-color: #3B3B3B;
 }

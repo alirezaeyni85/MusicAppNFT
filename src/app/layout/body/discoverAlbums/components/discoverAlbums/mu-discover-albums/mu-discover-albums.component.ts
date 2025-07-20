@@ -21,11 +21,7 @@ export class MuDiscoverAlbumsComponent implements OnInit {
 ngOnInit(): void {
   let getSongs =this.getInfoArtist.getDatas(0,{includeAlbum:false,includeSongs:true}).songs
   this.filteredSongs.set(getSongs.slice(0,3))
-  console.log(this.filteredSongs)
 }
-  onArtistClick(num:number){
-   console.log((num))
-  }
   onNavigate(id:number,albumName:string){
      this.router.navigate(['artist',id],{
       fragment:albumName,

@@ -1,0 +1,26 @@
+.card-not-found{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+  color: white;
+  font-size: 3rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ column-gap: 1.5rem;
+}
+.card-not-found h1{
+  text-align: center;
+}
+.card-not-found i{
+    font-size: 4.5rem;
+}
+main .back-btn button{
+    margin-left: 2rem;
+    margin-top: 3rem;
+    border: 1px solid white;
+    color: white;
+    padding: 1rem 4rem;
+    border-radius: 6rem 1rem 1rem 6rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
